@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Order Pizza Form</title>
+    <meta name="author" content="Mauricio Revuelta Munoz" />
+    <meta name="description" content="Form to order pizza and have it delivered to your address">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" /> <!--TO DO-->
+</head>
+
+<body>
+    <header>
+        <h1>LET'S START YOUR ORDER</h1>
+        <nav>
+            <a href="home.php">Home</a> |
+            <a href="menu.php">Our Menu</a> |
+            <a href="offers.php">Special Offers</a> |
+        </nav>
+    </header>
+    <main>
+        <form action="pizza_order.php" method="post">
+
+            <section>
+                <label for="pizza-quantity">
+                    <h2>Choose number of pizzas</h2>
+                </label>
+                <select name="number-of-pizza" id="pizza-quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </section>
+
+            <fieldset>
+                <legend>
+                    <h2>Choose your pizza size</h2>
+                </legend>
+
+                <input type="radio" id="extra-large" name="extra-large" checked>
+                <label for="extra-large">Extra Large 22"</label>
+
+                <input type="radio" id="large" name="large">
+                <label for="large"> Large 18"</label>
+
+                <input type="radio" id="medium" name="medium">
+                <label for="medium"> Medium 15"</label>
+
+                <input type="radio" id="small" name="small">
+                <label for="small"> Small 12"</label>
+            </fieldset>
+
+            <section>
+                <label for="shape">
+                    <h2>Select prefer shape:</h2>
+                </label>
+                <select name="shape" id="shape">
+                <option value="round">Round</option>
+                <option value="square">Square </option>
+                </select>
+            </section>
+
+            <fieldset>
+            <h2>Add toppings</h2>
+        </fieldset>
+
+
+
+            <!-- Add crust here-->
+            <fieldset>
+                <legend>
+                    <h3>Select Delivery option:</h3>
+                </legend>
+                <div>
+                    <input type="radio" id="delivery" name="delivery_option" value="delivery" checked />
+                    <label for="delivery"> Delivery </label>
+                </div>
+                <div>
+                    <input type="radio" id="take_out" name="delivery_option" value="take_out" />
+                    <label for="take_out"> Take out </label>
+                </div>
+                <div>
+                    <input type="radio" id="eat_in" name="delivery_option" value="eat_in" />
+                    <label for="eat_in"> Eat in </label>
+                </div>
+
+            </fieldset>
+        </form>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
