@@ -6,24 +6,27 @@
     <title>Order Pizza Form</title>
     <meta name="author" content="Mauricio Revuelta Munoz" />
     <meta name="description" content="Form to order pizza and have it delivered to your address">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" /> <!--TO DO-->
+    <link rel="shortcut icon" href="./images/pizza_icon.png" type="image/x-icon" /> <!--Icon for the website-->
+    <link rel="stylesheet" href="css/styles.css" />
+
 </head>
 
 <body>
     <header>
-        <h1>LET'S START YOUR ORDER</h1>
+        <h1 style="color: whitesmoke;">PIZZA FAST</h1>
         <nav>
-            <a href="home.php">Home</a> |
-            <a href="menu.php">Our Menu</a> |
-            <a href="offers.php">Special Offers</a> |
+            <a href="home.php" style="color: whitesmoke;">Home</a> |
+            <a href="menu.php" style="color: whitesmoke;">Our Menu</a> |
+            <a href="offers.php" style="color: whitesmoke;">Special Offers</a> |
         </nav>
     </header>
     <main>
         <form action="pizza_order.php" method="post">
-
+            <h2>LET'S START YOUR ORDER</h2>
+            <img src="./images/pizza3.jpg" alt="Fresh pizza image" width="600" height="200" />
             <section>
                 <label for="pizza-quantity">
-                    <h2>Choose number of pizzas</h2>
+                    <h3>Choose number of pizzas</h3>
                 </label>
                 <select name="number-of-pizza" id="pizza-quantity">
                     <option value="1">1</option>
@@ -36,39 +39,120 @@
 
             <fieldset>
                 <legend>
-                    <h2>Choose your pizza size</h2>
+                    <h3>Choose your pizza size</h3>
                 </legend>
 
-                <input type="radio" id="extra-large" name="extra-large" checked>
+                <input type="radio" id="extra-large" name="pizza-size" checked>
                 <label for="extra-large">Extra Large 22"</label>
 
-                <input type="radio" id="large" name="large">
+                <input type="radio" id="large" name="pizza-size">
                 <label for="large"> Large 18"</label>
 
-                <input type="radio" id="medium" name="medium">
+                <input type="radio" id="medium" name="pizza-size">
                 <label for="medium"> Medium 15"</label>
 
-                <input type="radio" id="small" name="small">
+                <input type="radio" id="small" name="pizza-size">
                 <label for="small"> Small 12"</label>
             </fieldset>
 
             <section>
                 <label for="shape">
-                    <h2>Select prefer shape:</h2>
+                    <h3>Select prefer shape:</h3>
                 </label>
                 <select name="shape" id="shape">
-                <option value="round">Round</option>
-                <option value="square">Square </option>
+                    <option value="round">Round</option>
+                    <option value="square">Square </option>
                 </select>
             </section>
 
             <fieldset>
-            <h2>Add toppings</h2>
-        </fieldset>
+                <legend>
+                    <h3>Add toppings</h3>
+                </legend>
+                <!--This was created as checkbox as user can add more then one topping per section-->
+                <div>
+
+                    <h5>Most popular toppings</h5>
 
 
+                    <input type="checkbox" id="bacon" name="bacon">
+                    <label for="bacon">Bacon</label>
 
-            <!-- Add crust here-->
+                    <input type="checkbox" id="extra-cheese" name="extra-cheese">
+                    <label for="extra-cheese">Extra Cheese</label>
+
+                    <input type="checkbox" id="mushroom" name="mushroom">
+                    <label for="mushroom">Mushroom</label>
+
+                    <input type="checkbox" id="pepperoni" name="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+
+                    <input type="checkbox" id="sausage" name="sausage">
+                    <label for="sausage">Sausage</label>
+                </div>
+
+                <div>
+
+                    <h5>Meat toppings</h5>
+
+                    <input type="checkbox" id="canadian-bacon" name="bacon">
+                    <label for="canadian-bacon">Canadian Bacon</label>
+
+                    <input type="checkbox" id="chorizo" name="chorizo">
+                    <label for="chorizo">Chorizo</label>
+
+                    <input type="checkbox" id="ham" name="ham">
+                    <label for="ham">Ham</label>
+
+                    <input type="checkbox" id="hamburger" name="hamburger">
+                    <label for="hamburger">Hamburger</label>
+
+                    <input type="checkbox" id="salami" name="salami">
+                    <label for="salami">Salami</label>
+
+                    <input type="checkbox" id="chicken" name="chicken">
+                    <label for="chicken">Shredded Chicken</label>
+
+                    <input type="checkbox" id="shrimp" name="shrimp">
+                    <label for="shrimp">Shrimp</label>
+                </div>
+
+                <div>
+
+                    <h5>Veggie toppings</h5>
+
+                    <input type="checkbox" id="corn" name="corn">
+                    <label for="corn">Corn</label>
+
+                    <input type="checkbox" id="cherry-tomato" name="cherry-tomato">
+                    <label for="cherry-tomato">Cherry tomato</label>
+
+                    <input type="checkbox" id="eggplant" name="eggplant">
+                    <label for="eggplant">Eggplant</label>
+
+                    <input type="checkbox" id="green-peppers" name="peppers">
+                    <label for="green-peppers">Green peppers</label>
+
+                    <input type="checkbox" id="spinach" name="spinach">
+                    <label for="spinach">Spinach</label>
+
+                    <input type="checkbox" id="tomato" name="tomato">
+                    <label for="tomato">Tomato</label>
+                </div>
+
+            </fieldset>
+            <section>
+                <label for="crust"></label>
+                <h3>Choose your preferred crust:</h3>
+                <select name="crust" id="crust">
+                    <option value="thin-crust">Thin crust</option>
+                    <option value="cheese">Cheese crust pizza</option>
+                    <option value="wrapping">Wrapping it up</option>
+                    <option value="cracker">Cracker Crust</option>
+                </select>
+                </p>
+            </section>
+
             <fieldset>
                 <legend>
                     <h3>Select Delivery option:</h3>
@@ -85,13 +169,63 @@
                     <input type="radio" id="eat_in" name="delivery_option" value="eat_in" />
                     <label for="eat_in"> Eat in </label>
                 </div>
-
             </fieldset>
+            <p>
+                <label for="notes">Any additional notes for your order?</label>
+                <textarea name="notes" id="user-notes"></textarea>
+            </p>
+            <p><button type="submit">Add order</button> <button type="submit">Reset</button> </p>
         </form>
+        <aside>
+            <h3>Contact Information</h3>
+            <form action="contact-info-php" method="post">
+                <p>
+                    <label for="name">First and last name:</label>
+                    <input type="text" name="name" id="name" required />
+                </p>
+                <p>
+                    <label for="emailAddress">Email</label>
+                    <input type="email" name="emailAddress" id="emailAddress" required />
+                </p>
+                <p>
+                    <label for="deliveryAddress">Delivery address</label>
+                    <input type="text" name="deliveryAddress" id="deliveryAddress" required />
+                <p>
+                    <label for="zipCode">Zip code</label>
+                    <input type="text" name="zipCode" id="zipCode" required />
+                </p>
+                </p>
+                <fieldset>
+                    <legend>
+                        <h4>Payment method</h4>
+                    </legend>
+                    <div>
+                        <input type="radio" id="creditCard" name="payment-method" value="creditCard" />
+                        <label for="creditCard"> Credit or Debit card </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="cash" name="payment-method" value="cash" />
+                        <label for="cash"> Cash </label>
+                    </div>
+                </fieldset>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+
+
+
+            </form>
+        </aside>
 
 
     </main>
     <footer>
+        <nav>
+            <a href="about/privacy-policy.php" title="Read our Privacy Policy">Privacy Policy</a> |
+            <a href="about/privacy-policy.php#personal-information"
+                title="Learn about how we treat your personal information">Use of Personal Information</a> |
+            <a href="about/terms-of-use.php">Terms of Use</a> |
+        </nav>
 
     </footer>
 

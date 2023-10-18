@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* General Styling */
+body {
+	font-family: 'Helvetica', sans-serif;
+	background-color: #f4f4f4;
+	/* Light gray background color */
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	color: white;
+}
+/* Header Styling */
+header {
+	background-color: #d9534f;
+	/* Reddish background for header */
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	margin-left: 30px;
+	
+}
+
+/* Make the SECTION column a bit wider than the ASIDE column */
+main section {
+	width: 70%;
+	padding: 40px;
+  margin-right: 40px;
+}
+
+main aside {
+	width: 30%;
+	padding: 40px;
+  margin-right: 40px;
+}
+textarea {
+	/* Align multiline text fields with their labels */
+	vertical-align: top;
+  
+	/* Provide space to type some text */
+	height: 5em;
+  }
+
+/* Menu Styling */
+.menu-item {
+	list-style-type: none;
+	padding: 10px;
+	margin: 10px 0;
+	background-color: #fff;
+	/* White background for menu items */
+	border-radius: 25px;
+}
+select {
+	width: 100px; /* Adjust the width of the select dropdown as needed */
+	font-size: 16px; /* Adjust the font size of the select dropdown text */
+  }
+/* Button Styling */
+button {
+	background-color: #d9534f;
+	/* Reddish button color */
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #c9302c;
+	/* Darker shade of red on hover */
+}
+h2, h3, h5, p {
+	font-family: 'Helvetica', sans-serif; /* Change to your preferred font */
+	color: #333; /* Adjust text color as needed */
+  }
+/* Footer Styling */
+footer {
+	background-color: #a8f1b6;
+	/* Dark background for footer */
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
